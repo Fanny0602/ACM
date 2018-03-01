@@ -1,0 +1,248 @@
+11856706_AC_343ms_9552kB
+import java.util.Scanner;
+public class  HDU1000
+{ 
+	public static void main(String[] args)
+	{
+		Scanner cin=new Scanner(System.in); 
+		while (cin.hasNextInt())
+		{
+			int a=cin.nextInt();
+			int b=cin.nextInt();
+			System.out.println(a+b);
+		}
+	}
+}
+
+-----------------------------------------------
+11507510_AC_265ms_9552kB
+import java.util.Scanner;
+
+public class HDU1001
+{
+	public static void main(String[] args)
+	{
+      Scanner s=new Scanner(System.in);
+       int  sum=0;
+      while (s.hasNextInt())
+      {
+    	  int n=s.nextInt();
+        for (int i=1;i<=n;i++)
+        {
+        	sum=sum+i;
+        }
+        System.out.println(sum);
+        System.out.println();
+        sum=0;
+      }
+	}
+}
+-----------------------------------------------
+12620635_AC_312ms_11756kB
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class HDU1002
+{
+	@SuppressWarnings("resource")
+	public static void main(String args[])
+	{
+		 Scanner in = new Scanner(System.in);
+		 int  ncase = in.nextInt();
+		 for(int i=1;i<=ncase;i++)
+		 {
+			BigInteger a= in.nextBigInteger();
+			BigInteger b= in.nextBigInteger();
+			System.out.println("Case" + " " + i + ":");
+			System.out.println(a + " + " + b + " = " + a.add(b));
+			if(i<ncase) System.out.println();
+		}
+	}
+}
+
+-----------------------------------------------
+11515070_AC_265ms_9908kB
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class HDU1004
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner in =new Scanner(System.in);
+		int a;
+		String e;
+		while(in.hasNextInt())
+		{
+			a=in.nextInt();
+			if(a==0||a>1000)break;
+			String[] c=new String[a];
+			int[] d =new int[a];
+			Arrays.fill(d, 0);
+			for(int i=0;i<a;i++)
+			{
+				e=in.next();
+				c[i]=e;
+				for(int j=0;j<=i;j++)
+				{
+					if(e.equals(c[j]))
+					{
+						d[j]++;
+						break;
+					}
+				}
+				
+			}
+			System.out.println(c[max(d)]);
+			
+		}
+
+	}
+	
+    public static int max(int[] a)
+    {
+    	int n=a.length;
+    	int max=a[0];
+    	int count=0;
+    	for(int i=0;i<n;i++)
+    	{
+    		if(max<a[i])
+    		{
+    			max=a[i];
+    			count=i;
+    		}
+    	}
+    	return count;
+    }
+}
+
+
+-----------------------------------------------
+11859458_AC_312ms_9548kB
+import java.util.Scanner;
+public class  HDU1005
+{  
+	public static void main(String[] args)
+	{
+		Scanner cin=new Scanner(System.in); 
+		while (cin.hasNextInt())
+		{
+			int a=cin.nextInt();
+			int b=cin.nextInt();
+			int n=cin.nextInt();
+			if  (a==0 && b==0 && n==0) break;
+			int []f=new int [51];
+		    f[1]=f[2]=1; 
+		    int i=0;
+              for ( i=3;i<51;i++)
+              {
+        	  	  f[i]=(a*f[i-1]+b*f[i-2])%7;
+        		  if (f[i]==1 && f[i-1]==1) break;
+              }
+              n=n%(i-2);
+              if (n==0)
+            	  System.out.println( f[i-2]);
+              else 
+            	  System.out.println( f[n]);
+		}
+	}
+}
+
+-----------------------------------------------
+12019353_AC_280ms_9580kB
+import java.util.Scanner;
+public class HDU1008
+{
+	public static void main(String[] args)
+	{
+		Scanner cin=new Scanner(System.in);
+		while (cin.hasNextInt())
+		{
+			int num=cin.nextInt();
+			if(num==0) break;
+            int begin=0,stop=0,sum=0;  //begin表示前面电梯所在的楼层，stop表示电梯要达到的楼层  
+            for(int i=0;i<num;i++)                     
+            {  
+                stop = cin.nextInt();                
+                if(stop>begin)  
+                {  
+                    sum+=(stop-begin)*6+5;  
+                }  
+                else  
+                {  
+                    sum+=(begin-stop)*4+5;  
+                }  
+                begin = stop;  
+            }  
+            System.out.println(sum);  
+		}
+	}
+}
+
+
+-----------------------------------------------
+12028354_AC_234ms_9636kB
+ 
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class HDU1013
+{  
+	public static void main(String[] args)
+	{  
+		Scanner input = new Scanner(System.in);
+        while (input.hasNext())
+        {
+            String num = input.next();
+            if (num.equals("0"))
+                break;
+            BigInteger bigInteger = new BigInteger(num);
+            BigInteger Nine = new BigInteger("9");
+            BigInteger MinusOne = new BigInteger("-1");
+            BigInteger b = bigInteger.add(MinusOne);
+            b = b.mod(Nine);
+            b = b.add(BigInteger.ONE);
+            System.out.println(b);
+	    }
+	} 
+}
+
+-----------------------------------------------
+11875854_AC_296ms_9520kB
+
+import java.util.Scanner;
+
+public class  HDU1021
+{
+	public static void main(String[] args)
+	{
+		Scanner cin=new Scanner(System.in); 
+		while (cin.hasNextInt())
+		{ 
+			int n=cin.nextInt();
+			n=n+2;
+			if ( n%4==0)
+				System.out.println("yes");
+			else  
+				System.out.println("no");
+		}
+	}
+}
+
+
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
