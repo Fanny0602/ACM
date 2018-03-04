@@ -233,6 +233,135 @@ public class  HDU1021
 
 
 -----------------------------------------------
+12034039_AC_327ms_9724kB
+import java.util.Scanner;
+
+public class HDU1076
+{
+	public static void main(String[] args)
+	{
+		Scanner cin=new Scanner(System.in);
+		while (cin.hasNext())
+		{
+			int t=cin.nextInt();
+			for (int i=0;i<t;i++)
+			{
+				int flag=0;
+				int y=cin.nextInt();
+				int n=cin.nextInt();
+				while(flag<n)
+				{
+					 if ((y%4==0 && y%100!=0 )||y%400==0 )
+						 flag++;
+						 y++;
+				}
+				System.out.println(y-1);
+			}
+		}
+	}
+	 
+}
+
+-----------------------------------------------
+
+12017977_AC_280ms_9880kB
+import java.util.Scanner;
+
+public class HDU1088
+{
+	public static void main(String[] args)
+	{
+		Scanner cin = new Scanner(System.in);
+		String str = "",strCom = "",strComCopys = "", strCopy = "";
+		int countNum = 0;
+		while(cin.hasNext())
+		{
+			str = cin.next();
+			if(str.equals("<br>"))
+			{
+				strCom = "";
+				System.out.println();
+			}
+			else if(str.equals("<hr>"))
+			{
+				
+				if(strCom.length() > 0)
+					System.out.println("\r\n--------------------------------------------------------------------------------");
+				else 
+					System.out.println("--------------------------------------------------------------------------------");
+				strCom = "";
+			}
+            else if(str != " " && str.trim().length() > 0)
+		{
+            	strComCopys = strCom;
+            	if(strCom.length() > 0)
+            		strCom += " " + str;
+            	else
+            		strCom += str;
+            	countNum = strComCopys.length();
+            	if(strCom.length() > 80)
+            	{
+            		System.out.println();
+            		strCom = str;
+            		countNum = 0;
+            		strComCopys = "";
+            	}
+            	
+            	if(countNum == 0)
+            		System.out.print(str);
+            	else
+            		System.out.print(" " + str);
+			}
+			strCopy = str;
+		}
+		System.out.println();
+		cin.close();
+	}
+
+}
+
+-----------------------------------------------
+11279895_AC_280ms_9540kB
+import java.util.Scanner;
+
+public class  HDU1089 
+{
+	public static void main(String[] args)
+	{
+   int a=0;
+   int b=0;
+    Scanner s= new Scanner(System.in);
+    while (s.hasNextInt()) 
+      {
+      a=s.nextInt();
+      b=s.nextInt();
+      System.out.println(a+b);
+	  }
+	}
+}
+
+-----------------------------------------------
+
+11280070_AC_249ms_9548kB
+import java.util.Scanner;
+public class HDU1090
+{
+	public static void main(String[] args)
+	{
+           int n=0;
+	       int a=0;
+		   int b=0;
+		    Scanner s= new Scanner(System.in);
+		      n=s.nextInt();
+		      for(int i=0;i<n;i++)
+		      {
+		      a=s.nextInt();
+		      b=s.nextInt();
+		      System.out.println(a+b);
+	          } 
+    }
+}
+
 -----------------------------------------------
 -----------------------------------------------
 -----------------------------------------------
@@ -245,4 +374,16 @@ public class  HDU1021
 -----------------------------------------------
 -----------------------------------------------
 -----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+-----------------------------------------------
+
 -----------------------------------------------
