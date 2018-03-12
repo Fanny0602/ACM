@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class   Main
+{
+	public static void main(String[] args)
+	{
+		Scanner s= new Scanner(System.in);
+       int zs=0;
+       int n=0;
+       int sum=0;
+       while (s.hasNextInt())
+       {
+    	   zs=s.nextInt();
+       int j=0;
+       for (j=0;j<zs;j++)
+       {
+    	sum=0;
+    	n=s.nextInt();
+       if (n==0)
+         {
+    	   break;
+         }
+       else 
+          {
+    	   int []a= new int [n];
+    	   for (int i=0;i<n;i++)
+    	     {  
+    		   a[i]=s.nextInt();
+    		   sum=sum+a[i];
+    	     }
+    	   System.out.println(sum);
+          }
+       if( j==zs)
+       {
+    	   break;
+       }
+  	  }
+       }
+	}
+}
