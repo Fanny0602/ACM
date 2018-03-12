@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+   Scanner scan=new Scanner(System.in);
+   double x1=0,x2=0,y1=0,y2=0;
+   while (scan.hasNextDouble())
+   {
+	   x1=scan.nextDouble();
+	   y1=scan.nextDouble();
+	   x2=scan.nextDouble();
+	   y2=scan.nextDouble();
+	   double  date=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+	   System.out.printf("%.2f%n",date);
+   }
+	}
+}
