@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+		while(s.hasNext())
+		{
+			int A = s.nextInt();
+			int B = s.nextInt();
+			int K = s.nextInt();
+			if(A!=0 && B!=0)
+			{
+				String strA = String.valueOf(A);
+				String strB = String.valueOf(B);
+				int t = strA.length();
+				for(int i=1;i<=K-t;i++)
+				{
+					strA="0"+strA;
+				}
+				t = strB.length();
+				for(int i=1;i<=K-t;i++)
+				{
+					strB="0"+strB;
+				}
+
+				int sum=0;
+				if((strA.substring(strA.length()-K, strA.length())).equals
+				  (strB.substring(strB.length()-K, strB.length())))
+				{
+					sum=-1;
+				}
+				else sum=A+B;
+				System.out.println(sum);
+			}
+		}
+	}
+}
