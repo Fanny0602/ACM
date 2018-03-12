@@ -20,3 +20,25 @@ public class Main
 		}
 	}
 }
+-------------------------
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		 while (s.hasNext())
+		 {
+			 String str=s.next();
+			 char []a=str.toCharArray();
+			 int strlen=a.length,sum=0;
+			 int b=s.nextInt();
+			 for (int i=0;i<strlen;i++)
+			 {
+				 sum=sum*10+a[i]-'0';//(-'0')将char类型转化为int类型
+				 sum=sum%b;
+			 }
+			 System.out.println(sum);
+		 }
+	}
+}
