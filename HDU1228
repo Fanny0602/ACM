@@ -1,0 +1,46 @@
+ 
+
+import java.util.Scanner;
+
+public class Main
+{
+
+	public static void main(String[] args)
+	{
+      Scanner  cin=new Scanner(System.in);
+      String str="";
+      while (cin.hasNextLine())
+      {
+    	  str =cin.nextLine();
+    	  //英文状态转阿拉伯数字
+    	  str= str.replace("zero", "0");
+    	  str= str.replace("one", "1");
+    	  str= str.replace("two", "2");
+    	  str= str.replace("three", "3");
+    	  str= str.replace("four", "4");
+    	  str= str.replace("five", "5");
+    	  str= str.replace("six", "6");
+    	  str= str.replace("seven", "7");
+    	  str= str.replace("eight", "8");
+    	  str= str.replace("nine", "9");
+    	  //去空格
+    	  str= str.replace(" ", "");
+          int index=str.indexOf("+");
+          String a=str.substring(0, index);              //前半截a
+          String b=str.substring(index+1,str.length()-1);//后半截b
+          //字符串转整形        
+          int m=Integer.parseInt(a);
+          int n=Integer.parseInt(b);
+          if (m==0 && n==0)
+          {
+        	  break;
+          }
+          else 
+          {
+        	  System.out.println(m+n);
+          }
+    	  
+      }
+	}
+
+}
