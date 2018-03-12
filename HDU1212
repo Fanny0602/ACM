@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		while(s.hasNext())
+		{
+			String strt = s.next();
+			char[] a = strt.toCharArray();
+			int strlen = a.length,sum=0;
+			int b = s.nextInt();
+			for(int i=0;i<strlen;i++)
+			{
+				sum=sum*10+a[i]-'0';
+				sum=sum%b;
+			}
+			System.out.println(sum);
+		}
+	}
+}
