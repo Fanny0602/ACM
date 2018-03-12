@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Main
+{
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		while (s.hasNext() )
+		{
+			//分割 去空格 放入数组排序输出
+	        @SuppressWarnings("rawtypes")
+	        
+	        //分割
+			String str=s.nextLine();
+			String []store=str.split("[5]");
+			
+			//排序
+			int p=0;
+			ArrayList list =new ArrayList();  
+			int []arr=new int [store.length];
+			for (int i=0;i<store.length;i++)
+			{
+				if (!store[i].equals(""))
+				{
+					list.add(Integer.valueOf(store[i]));
+				}
+			}
+			Collections.sort(list);
+			
+			//打印
+			for (int i=0;i<list.size();i++)
+			{
+				System.out.print(i!=0?" "+list.get(i):list.get(i));
+			}
+			System.out.println();
+		}
+	}
+
+}
