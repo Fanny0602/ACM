@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class  Main
+{
+	public static void main(String[] args)
+	{
+   double r=0;
+   double v=0;
+    Scanner s= new Scanner(System.in);
+    while(s.hasNext())
+     {
+    r=s.nextDouble();
+    double pi=3.1415927;
+    r=Math.pow(r, 3);
+    v=4*pi*r/3;
+    System.out.printf("%.3f\r\n",v);
+	 }
+	}
+}
+---------------------
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+       double r=0;
+       double v=0;
+		Scanner s=new Scanner(System.in );
+		while(s.hasNextDouble())
+		{
+		r=s.nextDouble();
+		v=3.1415927*r*r*r*((double)4/3);
+		System.out.printf("%.3f%n", v);
+		}
+	}
+}
+-------------------
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args)
+	{
+   double r=0;
+   double v=0;
+    Scanner s= new Scanner(System.in);
+    while(s.hasNext())
+     {
+    r=s.nextDouble();
+    double pi=3.1415927;
+    r=Math.pow(r, 3);
+    v=4*pi*r/3;
+    System.out.printf("%.3f\r\n",v);
+	 }
+	}
+}
+
